@@ -1,6 +1,22 @@
 <script setup>
-defineProps({
+import { computed } from "vue";
+import "primeicons/primeicons.css";
+
+const props = defineProps({
   job: Object,
+});
+
+const showAllDescription = ref(false);
+const toggleFullDescription = () => {
+  showAllDescription.value = !showAllDescription.value;
+};
+
+const truncatedDescription = computed(() => {
+  let description = props.job.description;
+  if (!showAllDescription.value) {
+    description = description.substring(0, 100) + " ...";
+  }
+  return description;
 });
 </script>
 
@@ -15,7 +31,14 @@ defineProps({
         </div>
 
         <div class="mb-5">
-          {{ job.description }}
+          {{ truncatedDescription }}
+
+          <div
+            @click="toggleFullDescription"
+            class="hover:text-blue-500 text-blue-400 py-4"
+          >
+            {{ showAllDescription ? "Read Less" : "Read More" }}
+          </div>
         </div>
 
         <h3 class="text-green-500 mb-2">{{ job.salary }}</h3>
@@ -23,8 +46,9 @@ defineProps({
         <div class="border border-gray-100 mb-5"></div>
 
         <div class="flex flex-col lg:flex-row justify-between mb-4">
-          <div class="text-orange-700 mb-3">
+          <div class="text-gray-400 mb-3">
             <i class="fa-solid fa-location-dot text-lg"></i>
+            <i class="pi pi-map-marker" style="font-size: 1rem"></i>
             {{ job.location }}
           </div>
           <a

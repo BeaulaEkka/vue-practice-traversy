@@ -11,9 +11,9 @@ defineProps({
   <section class="bg-indigo-400 mb-4 relative">
     <div class="w-full h-90 border border-red-500">
       <img
-        src="https://img.freepik.com/free-photo/blonde-female-executive-posing-with-smile-arms-crossed-brainstorm-with-managers-indoor-portrait-european-student-spending-time-hall-with-asian-african-friends_197531-3755.jpg?t=st=1722795336~exp=1722798936~hmac=29dbbd9f201d6a7c6c342e1e605f59db228afe44c660c17b74eaa6e98dced551&w=2000"
+        src="https://img.freepik.com/free-photo/caucasian-young-woman-s-half-length-portrait-yellow-studio_155003-22408.jpg?t=st=1722795629~exp=1722799229~hmac=f9c163d0424269f730248f5dede7f5b6e10c26cb0b7fa9405e8a2e63011004f7&w=2000"
         alt="office"
-        class="w-full h-[60vh] object-cover"
+        class="w-full h-[65vh] object-cover"
       />
     </div>
     <div
